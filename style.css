@@ -29,8 +29,9 @@
 }
 
 body {
-    background: var(--bg-color)
-    no-repeat top center/cover;
+    background: var(--bg-color) no-repeat top center/cover;
+    height: 100vh;
+
 }
 
 body * {
@@ -42,8 +43,8 @@ body * {
 #container {
     margin: 5.6rem auto;
     padding: 0 2.4rem;
-    height: 72rem;
-    width: 36rem;
+    width: 100%;
+    max-width: 58.8rem;
 }
 
 #profile {
@@ -161,5 +162,15 @@ footer {
     text-align: center;
     padding: 2.4rem 0;
     font-size: 1.4rem;
+}
+
+@media (min-width: 45rem){
+    :root {
+        --bg-color: url(./assets/bg-desktop-dark.jpg);
+    }
+
+    .light {
+        --bg-color: url(./assets/bg-desktop-light.jpg);
+    }
 }
 
