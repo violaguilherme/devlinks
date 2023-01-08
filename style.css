@@ -83,11 +83,16 @@ body * {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+
+    animation: slide-left .3s;
+}
+
+#switch button:hover {
+    outline: .8rem solid var(--highlight-color);
 }
 
 .light #switch button {
-    right: 0;
-    left: initial;
+    animation: slide-right .3s forwards;
 }
 
 #switch span {
@@ -171,6 +176,26 @@ footer {
 
     .light {
         --bg-color: url(./assets/bg-desktop-light.jpg);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-left {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
     }
 }
 
